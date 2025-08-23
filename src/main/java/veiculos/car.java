@@ -11,6 +11,7 @@ package veiculos;
     private int ano;
     private int placa;
     int bolsonaro2 = 2;
+    int bolsonaro3 =3;
     int portas;
     int capacidadePortaMalas;
     String tipoCombustivel;
