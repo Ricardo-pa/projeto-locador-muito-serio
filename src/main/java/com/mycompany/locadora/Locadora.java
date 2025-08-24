@@ -3,6 +3,7 @@
  */
 
 package com.mycompany.locadora;
+import veiculos.Veiculo;
 import veiculos.Car;
 import veiculos.*;
 import java.util.*;

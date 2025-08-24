@@ -23,6 +23,7 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
     }
     public String getAno(){
         return this.Ano;
+        
     }
     public String getPlaca(){
         return this.Placa;
