@@ -8,12 +8,13 @@ package veiculos;
  *
  * @author ricardo.parreira
  */
-public class moto extends veiculo {
+public class moto extends Veiculo {
    private int cilindradas;
     private String tipoPartida;
     private boolean temBau;
     private String tipoFreio;
     private boolean guidonEsportivo;
+    private boolean alugado;
     
     public moto(String nome, String Marca, String modelo, int ano, String placa, int cilindradas, String tipoPartida, boolean temBau, String tipoFreio, boolean guidonEsportivo){
         super(nome, Marca, modelo, ano, placa);

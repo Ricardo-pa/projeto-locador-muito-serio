@@ -18,21 +18,34 @@ public class TelaEscolha extends javax.swing.JFrame {
     public String getVeiculoSelecionado(){
        return veiculoSelecionado;
    }
-   
+   //String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         EscolhaVeic = new javax.swing.JComboBox<>();
         lbCancel = new javax.swing.JButton();
-        lbOk = new javax.swing.JButton();
+        Ok = new javax.swing.JButton();
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Escolha o Veiculo");
-
-        jLabel1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        jLabel1.setText("Escolha qual vericulo quer registrar");
+        setResizable(false);
+        setSize(new java.awt.Dimension(300, 150));
 
         EscolhaVeic.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Carro", "Moto" }));
         EscolhaVeic.addActionListener(new java.awt.event.ActionListener() {
@@ -48,10 +61,10 @@ public class TelaEscolha extends javax.swing.JFrame {
             }
         });
 
-        lbOk.setText("OK");
-        lbOk.addActionListener(new java.awt.event.ActionListener() {
+        Ok.setText("OK");
+        Ok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lbOkActionPerformed(evt);
+                OkActionPerformed(evt);
             }
         });
 
@@ -60,32 +73,26 @@ public class TelaEscolha extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(lbOk, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(131, Short.MAX_VALUE)
+                .addComponent(Ok, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbCancel)
-                .addGap(25, 25, 25))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(EscolhaVeic, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(114, 114, 114))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(114, 114, 114)
+                .addComponent(EscolhaVeic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(EscolhaVeic, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
+                .addGap(24, 24, 24)
+                .addComponent(EscolhaVeic, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbCancel)
-                    .addComponent(lbOk))
-                .addGap(22, 22, 22))
+                    .addComponent(Ok))
+                .addContainerGap())
         );
 
         pack();
@@ -96,14 +103,14 @@ public class TelaEscolha extends javax.swing.JFrame {
     }//GEN-LAST:event_EscolhaVeicActionPerformed
 
     private void lbCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lbCancelActionPerformed
-        veiculoSelecionado = null;
+       veiculoSelecionado = null;
         this.dispose();
     }//GEN-LAST:event_lbCancelActionPerformed
 
-    private void lbOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lbOkActionPerformed
+    private void OkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OkActionPerformed
         veiculoSelecionado = (String) EscolhaVeic.getSelectedItem();
         this.dispose();
-    }//GEN-LAST:event_lbOkActionPerformed
+    }//GEN-LAST:event_OkActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,8 +149,9 @@ public class TelaEscolha extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> EscolhaVeic;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton Ok;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JButton lbCancel;
-    private javax.swing.JButton lbOk;
     // End of variables declaration//GEN-END:variables
 }
