@@ -1,50 +1,20 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package jframes;
 
 /**
  *
- * @author Ricardo
+ * @author Farmácia
  */
-public class TelaRegistrarCarro extends javax.swing.JFrame {
-private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
-    
-    public TelaRegistrarCarro() {
+public class TelaRegistrarMoto extends javax.swing.JPanel {
+
+    /**
+     * Creates new form TelaRegistrarMoto
+     */
+    public TelaRegistrarMoto() {
         initComponents();
-        setLocationRelativeTo(null);
-    }
-    public String getnome(){
-        return this.Nome;
-    }
-    public String getModelo(){
-        return this.Modelo;
-    }
-    public String getAno(){
-        return this.Ano;
-        
-    }
-    public String getPlaca(){
-        return this.Placa;
-    }
-    public String getPortas(){
-        return this.Portas;
-    }
-    public String getMarca(){
-        return this.Marca;
-    }
-    public String getCombus(){
-        return this.Combus;
-    }
-    public String getAr(){
-        return this.Ar;
-    }
-    public String getCambio(){
-        return this.Cambio;
-    }
-    public String getCapPoMa(){
-        return this.CapPoMa;
     }
 
     /**
@@ -56,6 +26,18 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        PlacaCarro = new javax.swing.JTextField();
+        CambioCarro = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        Ok = new javax.swing.JButton();
+        CombuCarro = new javax.swing.JTextField();
+        lbCancel = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        PortasCarro = new javax.swing.JComboBox<>();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jLabel7 = new javax.swing.JLabel();
+        PortaMaCarro = new javax.swing.JTextField();
+        ArCarro = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         NomeCarro = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -64,24 +46,88 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
         ModeloCarro = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         AnoCarro = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        PlacaCarro = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        CombuCarro = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        PortasCarro = new javax.swing.JComboBox<>();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
-        jLabel7 = new javax.swing.JLabel();
-        PortaMaCarro = new javax.swing.JTextField();
-        ArCarro = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        CambioCarro = new javax.swing.JComboBox<>();
-        Ok = new javax.swing.JButton();
-        lbCancel = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Registrar Carro");
+        PlacaCarro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlacaCarroActionPerformed(evt);
+            }
+        });
+
+        CambioCarro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manual", "Automatico" }));
+
+        jLabel6.setText("Portas:");
+
+        Ok.setText("OK");
+        Ok.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OkActionPerformed(evt);
+            }
+        });
+
+        CombuCarro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CombuCarroActionPerformed(evt);
+            }
+        });
+
+        lbCancel.setText("Cancelar");
+        lbCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lbCancelActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText("Combustivel:");
+
+        PortasCarro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4 Portas", "2 Portas" }));
+        PortasCarro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PortasCarroActionPerformed(evt);
+            }
+        });
+
+        jDesktopPane1.setBackground(new java.awt.Color(242, 242, 242));
+
+        jLabel7.setText("Capacidade Porta malas (L):");
+
+        PortaMaCarro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PortaMaCarroActionPerformed(evt);
+            }
+        });
+
+        jDesktopPane1.setLayer(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(PortaMaCarro, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addGap(159, 159, 159)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PortaMaCarro)
+                .addGap(123, 123, 123))
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(PortaMaCarro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(3, 3, 3))
+        );
+
+        ArCarro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ArCarroActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Nome:");
 
@@ -115,93 +161,14 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
             }
         });
 
-        jLabel5.setText("Placa:");
-
-        PlacaCarro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlacaCarroActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setText("Portas:");
-
-        CombuCarro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CombuCarroActionPerformed(evt);
-            }
-        });
-
-        jLabel8.setText("Combustivel:");
-
-        PortasCarro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4 Portas", "2 Portas" }));
-        PortasCarro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PortasCarroActionPerformed(evt);
-            }
-        });
-
-        jDesktopPane1.setBackground(new java.awt.Color(242, 242, 242));
-
-        jLabel7.setText("Capacidade Porta malas (L):");
-
-        PortaMaCarro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PortaMaCarroActionPerformed(evt);
-            }
-        });
-
-        jDesktopPane1.setLayer(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jDesktopPane1.setLayer(PortaMaCarro, javax.swing.JLayeredPane.DEFAULT_LAYER);
-
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(127, 127, 127)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PortaMaCarro)
-                .addGap(155, 155, 155))
-        );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(PortaMaCarro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(3, 3, 3))
-        );
-
-        ArCarro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ArCarroActionPerformed(evt);
-            }
-        });
-
         jLabel10.setText("Ar Condicionado:");
+
+        jLabel5.setText("Placa:");
 
         jLabel11.setText("Cambio");
 
-        CambioCarro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Manual", "Automatico" }));
-
-        Ok.setText("OK");
-        Ok.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OkActionPerformed(evt);
-            }
-        });
-
-        lbCancel.setText("Cancelar");
-        lbCancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lbCancelActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -248,12 +215,12 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
                                         .addComponent(ModeloCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE))
                                     .addComponent(PortasCarro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                    .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(Ok, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lbCancel)))
+                        .addComponent(lbCancel))
+                    .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -291,9 +258,56 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
                     .addComponent(Ok))
                 .addContainerGap())
         );
-
-        pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void PlacaCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlacaCarroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PlacaCarroActionPerformed
+
+    private void OkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OkActionPerformed
+        Nome = (String) NomeCarro.getText();
+        Marca = (String) MarcaCarro.getText();
+        Modelo = (String) ModeloCarro.getText();
+        Ano = (String) AnoCarro.getText();
+        Placa = (String) PlacaCarro.getText();
+        Portas = (String) PortasCarro.getSelectedItem();
+        Combus = (String) CombuCarro.getText();
+        Ar = (String) ArCarro.getText();
+        Cambio = (String) CambioCarro.getSelectedItem();
+        CapPoMa = (String) PortaMaCarro.getText();
+        this.dispose();
+    }//GEN-LAST:event_OkActionPerformed
+
+    private void CombuCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CombuCarroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CombuCarroActionPerformed
+
+    private void lbCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lbCancelActionPerformed
+        Nome = null;
+        Marca = null;
+        Modelo = null;
+        Ano = null;
+        Placa = null;
+        Portas = null;
+        Combus = null;
+        Ar = null;
+        Cambio = null;
+        CapPoMa = null;
+        this.dispose();
+
+    }//GEN-LAST:event_lbCancelActionPerformed
+
+    private void PortasCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PortasCarroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PortasCarroActionPerformed
+
+    private void PortaMaCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PortaMaCarroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PortaMaCarroActionPerformed
+
+    private void ArCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ArCarroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ArCarroActionPerformed
 
     private void NomeCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomeCarroActionPerformed
         // TODO add your handling code here:
@@ -311,90 +325,6 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
         // TODO add your handling code here:
     }//GEN-LAST:event_AnoCarroActionPerformed
 
-    private void PlacaCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlacaCarroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PlacaCarroActionPerformed
-
-    private void CombuCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CombuCarroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CombuCarroActionPerformed
-
-    private void PortaMaCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PortaMaCarroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PortaMaCarroActionPerformed
-
-    private void ArCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ArCarroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ArCarroActionPerformed
-
-    private void PortasCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PortasCarroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PortasCarroActionPerformed
-
-    private void OkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OkActionPerformed
-        Nome = (String) NomeCarro.getText();
-        Marca = (String) MarcaCarro.getText();
-        Modelo = (String) ModeloCarro.getText();
-        Ano = (String) AnoCarro.getText();
-        Placa = (String) PlacaCarro.getText();
-        Portas = (String) PortasCarro.getSelectedItem();
-        Combus = (String) CombuCarro.getText();
-        Ar = (String) ArCarro.getText();
-        Cambio = (String) CambioCarro.getSelectedItem();
-        CapPoMa = (String) PortaMaCarro.getText();
-        this.dispose();
-    }//GEN-LAST:event_OkActionPerformed
-
-    private void lbCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lbCancelActionPerformed
-        Nome = null;
-        Marca = null;
-        Modelo = null;
-        Ano = null; 
-        Placa = null; 
-        Portas = null; 
-        Combus = null;
-        Ar = null;
-        Cambio = null;
-        CapPoMa = null;
-        this.dispose();
-        
-    }//GEN-LAST:event_lbCancelActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaRegistrarCarro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaRegistrarCarro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaRegistrarCarro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaRegistrarCarro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaRegistrarCarro().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AnoCarro;

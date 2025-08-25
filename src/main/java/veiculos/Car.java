@@ -5,10 +5,7 @@
 package veiculos;
 
 public class Car extends Veiculo{
-     private String nome;
-    private String Marca;
-    private String Modelo;
-    private int ano;
+    
     int portas;
     int capacidadePortaMalas;
     String tipoCombustivel;
