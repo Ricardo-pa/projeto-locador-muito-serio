@@ -25,11 +25,13 @@ public class VeiculoService {
              NewVeiculo = tela.getVeiculoSelecionado();
              
              if(NewVeiculo == null) {
-                 JOptionPane.showMessageDialog(null, "digite um valor valido");
+                 JOptionPane.showMessageDialog(null, "Escolha uma opção");
                 }
             }
              if("Carro".equals(NewVeiculo) ){
                  CarService.RegistrarCarro(veiculos);
+             } else if("Moto".equals(NewVeiculo) ){
+                 MotoService.RegistrarMoto(veiculos);
              }
     }
     

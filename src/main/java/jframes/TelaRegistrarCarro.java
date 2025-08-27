@@ -346,6 +346,7 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
     }//GEN-LAST:event_OkActionPerformed
 
     private void lbCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lbCancelActionPerformed
+        
         Nome = null;
         Marca = null;
         Modelo = null;
@@ -357,6 +358,7 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
         Cambio = null;
         CapPoMa = null;
         this.dispose();
+        
         
     }//GEN-LAST:event_lbCancelActionPerformed
 

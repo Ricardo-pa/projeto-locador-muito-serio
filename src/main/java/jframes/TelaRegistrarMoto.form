@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="resizable" type="boolean" value="false"/>
+    <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[600, 300]"/>
+    </Property>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="2"/>
+  </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -21,62 +30,62 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="anos" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="combustivels" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="nomes" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="AnoCarro" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="AnoMoto" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <Component id="placas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="PlacaCarro" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="PlacaMoto" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="NomeCarro" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="NomeMoto" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <Component id="marcas" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="MarcaCarro" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="MarcaMoto" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="CombuCarro" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="CombuMoto" min="-2" pref="100" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                              <Component id="guidãos" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="ArCarro" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="GuidonMoto" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="CambioCarro" max="32767" attributes="0"/>
+                              <Component id="modelos" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="ModeloMoto" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cilindradas" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="partidas" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="ModeloCarro" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Component id="PartidaMoto" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="CilindradaMoto" min="-2" pref="100" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="PortasCarro" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="Ok" min="-2" pref="77" max="-2" attributes="0"/>
+                      <Component id="OkMoto" min="-2" pref="77" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="lbCancel" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbCancelMoto" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jDesktopPane1" alignment="1" max="32767" attributes="0"/>
               </Group>
@@ -89,37 +98,37 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="NomeCarro" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="MarcaCarro" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="ModeloCarro" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="nomes" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="NomeMoto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="marcas" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="MarcaMoto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="modelos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ModeloMoto" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="AnoCarro" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="PlacaCarro" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="PortasCarro" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="anos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="AnoMoto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="placas" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="PlacaMoto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cilindradas" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CilindradaMoto" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="CombuCarro" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="ArCarro" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="CambioCarro" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="combustivels" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CombuMoto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="guidãos" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="GuidonMoto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="partidas" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="PartidaMoto" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="jDesktopPane1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="28" max="32767" attributes="0"/>
+              <EmptySpace pref="57" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lbCancel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="Ok" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbCancelMoto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="OkMoto" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -127,17 +136,18 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="PlacaCarro">
+    <Component class="javax.swing.JTextField" name="PlacaMoto">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PlacaCarroActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PlacaMotoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="CambioCarro">
+    <Component class="javax.swing.JComboBox" name="PartidaMoto">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="2">
-            <StringItem index="0" value="Manual"/>
-            <StringItem index="1" value="Automatico"/>
+          <StringArray count="3">
+            <StringItem index="0" value="Eletrica"/>
+            <StringItem index="1" value="Pedal"/>
+            <StringItem index="2" value="Mista"/>
           </StringArray>
         </Property>
       </Properties>
@@ -145,52 +155,36 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel6">
+    <Component class="javax.swing.JLabel" name="cilindradas">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Portas:"/>
+        <Property name="text" type="java.lang.String" value="Cilindradas:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="Ok">
+    <Component class="javax.swing.JButton" name="OkMoto">
       <Properties>
         <Property name="text" type="java.lang.String" value="OK"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OkActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OkMotoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="CombuCarro">
+    <Component class="javax.swing.JTextField" name="CombuMoto">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CombuCarroActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CombuMotoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="lbCancel">
+    <Component class="javax.swing.JButton" name="lbCancelMoto">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lbCancelActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lbCancelMotoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel8">
+    <Component class="javax.swing.JLabel" name="combustivels">
       <Properties>
         <Property name="text" type="java.lang.String" value="Combustivel:"/>
       </Properties>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="PortasCarro">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="2">
-            <StringItem index="0" value="4 Portas"/>
-            <StringItem index="1" value="2 Portas"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PortasCarroActionPerformed"/>
-      </Events>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-      </AuxValues>
     </Component>
     <Container class="javax.swing.JDesktopPane" name="jDesktopPane1">
       <Properties>
@@ -203,11 +197,11 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
-                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                  <Component id="asdasd" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="PortaMaCarro" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
+                  <Component id="FreioMoto" pref="180" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="167" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -216,8 +210,8 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="PortaMaCarro" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="asdasd" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="FreioMoto" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
               </Group>
@@ -225,77 +219,92 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="asdasd">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Capacidade Porta malas (L):"/>
+            <Property name="text" type="java.lang.String" value="Tipo do Freio:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="PortaMaCarro">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PortaMaCarroActionPerformed"/>
-          </Events>
+        <Component class="javax.swing.JComboBox" name="FreioMoto">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Disco"/>
+                <StringItem index="1" value="Tambor"/>
+                <StringItem index="2" value="Hidraulico"/>
+                <StringItem index="3" value="mecanico"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JTextField" name="ArCarro">
+    <Component class="javax.swing.JTextField" name="GuidonMoto">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ArCarroActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GuidonMotoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel1">
+    <Component class="javax.swing.JLabel" name="nomes">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nome:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="NomeCarro">
+    <Component class="javax.swing.JTextField" name="NomeMoto">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NomeCarroActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NomeMotoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="marcas">
       <Properties>
         <Property name="text" type="java.lang.String" value="Marca:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="MarcaCarro">
+    <Component class="javax.swing.JTextField" name="MarcaMoto">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MarcaCarroActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MarcaMotoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="modelos">
       <Properties>
         <Property name="text" type="java.lang.String" value="Modelo:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="ModeloCarro">
+    <Component class="javax.swing.JTextField" name="ModeloMoto">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModeloCarroActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ModeloMotoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="anos">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ano:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="AnoCarro">
+    <Component class="javax.swing.JTextField" name="AnoMoto">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AnoCarroActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AnoMotoActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel10">
+    <Component class="javax.swing.JLabel" name="guid&#xe3;os">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ar Condicionado:"/>
+        <Property name="text" type="java.lang.String" value="guid&#xe3;o:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="placas">
       <Properties>
         <Property name="text" type="java.lang.String" value="Placa:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel11">
+    <Component class="javax.swing.JLabel" name="partidas">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cambio"/>
+        <Property name="text" type="java.lang.String" value="Partida:"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="CilindradaMoto">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CilindradaMotoActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
