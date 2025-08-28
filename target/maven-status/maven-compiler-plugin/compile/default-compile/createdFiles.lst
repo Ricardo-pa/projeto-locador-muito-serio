@@ -2,6 +2,8 @@ com\mycompany\locadora\Locadora.class
 jframes\TelaRegistrarCarro$1.class
 jframes\TelaEscolha$4.class
 veiculos\Car.class
+jframes\TelaListaVeiculos$4.class
+jframes\TelaListaVeiculos.class
 veiculos\CarService.class
 veiculos\Veiculo.class
 veiculos\Moto.class
@@ -15,6 +17,7 @@ jframes\TelaEscolha$2.class
 jframes\TelaRegistrarCarro$3.class
 jframes\TelaRegistrarMoto$1.class
 metodos.class
+jframes\TelaListaVeiculos$1.class
 jframes\TelaRegistrarMoto$4.class
 jframes\TelaRegistrarCarro$10.class
 jframes\TelaRegistrarMoto$9.class
@@ -25,10 +28,12 @@ jframes\TelaRegistrarCarro$11.class
 jframes\TelaRegistrarCarro$9.class
 jframes\TelaRegistrarMoto$7.class
 veiculos\VeiculoService.class
+jframes\TelaListaVeiculos$3.class
 jframes\TelaRegistrarMoto$2.class
 jframes\TelaRegistrarMoto$8.class
 jframes\TelaRegistrarMoto$3.class
 jframes\TelaEscolha.class
+jframes\TelaListaVeiculos$2.class
 jframes\TelaRegistrarCarro$5.class
 jframes\TelaEscolha$3.class
 jframes\TelaRegistrarMoto$10.class

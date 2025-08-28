@@ -34,6 +34,48 @@ public class VeiculoService {
                  MotoService.RegistrarMoto(veiculos);
              }
     }
+    public static void VerVeiculos(List<Veiculo> veiculos){
+        TelaEscolha tela = new TelaEscolha();
+             String NewVeiculo = tela.getVeiculoSelecionado();
+             
+             while(NewVeiculo == null){
+             tela.setVisible(true);
+             while(tela.isVisible()){
+                 Thread.onSpinWait();
+                }
+             NewVeiculo = tela.getVeiculoSelecionado();
+             
+             if(NewVeiculo == null) {
+                 JOptionPane.showMessageDialog(null, "Escolha uma opção");
+                }
+            }
+             if("Carro".equals(NewVeiculo) ){
+                 CarService.VerListaCarro(veiculos);
+             } else if("Moto".equals(NewVeiculo) ){
+                 MotoService.VerListaMoto(veiculos);
+             }
+    }
+    public static void EditarVeiculos(List<Veiculo> veiculos){
+        TelaEscolha tela = new TelaEscolha();
+             String NewVeiculo = tela.getVeiculoSelecionado();
+             
+             while(NewVeiculo == null){
+             tela.setVisible(true);
+             while(tela.isVisible()){
+                 Thread.onSpinWait();
+                }
+             NewVeiculo = tela.getVeiculoSelecionado();
+             
+             if(NewVeiculo == null) {
+                 JOptionPane.showMessageDialog(null, "Escolha uma opção");
+                }
+            }
+             if("Carro".equals(NewVeiculo) ){
+                 CarService.VerListaCarro(veiculos);
+             } else if("Moto".equals(NewVeiculo) ){
+                 MotoService.VerListaMoto(veiculos);
+             }
+    }
     
     
     

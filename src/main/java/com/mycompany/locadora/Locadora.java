@@ -20,7 +20,7 @@ public class Locadora {
 
     public static void main(String[] args) {
          
-         String[] option = {"registrar veiculo" , "ver veiculos", "alugar veiculo","devolver veiculo" ,"sair" };
+         String[] option = {"registrar veiculos" , "ver veiculos", "editar veiculos" ,"alugar veiculos","devolver veiculos" ,"sair" };
          boolean rodando = true;
          
          
@@ -40,17 +40,7 @@ public class Locadora {
          
          switch(escolha){
              case 0: RegistrarVeiculo(); break;
-             case 1: if(!veiculos.isEmpty()) {
-            Veiculo primeiroCarro = veiculos.get(0);
-            JOptionPane.showMessageDialog(null, 
-                "Primeiro carro da lista:\n" +
-                "Nome: " + primeiroCarro.getNome() + "\n" +
-                "Marca: " + primeiroCarro.getMarca() + "\n" +
-                "Modelo: " + primeiroCarro.getModelo());
-        } else {
-            JOptionPane.showMessageDialog(null, "Lista vazia!");
-        }
-        break;
+             case 1: verListaVeiculos(veiculos); break;
          }
              
                  
@@ -58,6 +48,9 @@ public class Locadora {
     }
     private static void RegistrarVeiculo(){
         VeiculoService.RegistrarVeiculo(veiculos);
+    }
+    private static void verListaVeiculos(List<Veiculo> veiculos){
+        VeiculoService.VerVeiculos(veiculos);
     }
     
 }

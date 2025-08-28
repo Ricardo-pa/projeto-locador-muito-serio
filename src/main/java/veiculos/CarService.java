@@ -5,8 +5,11 @@
 package veiculos;
 
 import static com.mycompany.locadora.Locadora.veiculos;
+import veiculos.Car;
 import java.util.*;
+import java.util.stream.Collectors;
 import javax.swing.JOptionPane;
+import jframes.TelaListaVeiculos;
 import jframes.TelaRegistrarCarro;
 
 /**
@@ -62,18 +65,118 @@ public class CarService {
                    }
                    catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Erro ao converter valores. Verifique os campos numéricos.");
-        } 
-                    
-                    
-                  
-                    
-                         
-                    
-                    
-                  
-            
+        }
             }
         }
+    public static void VerListaCarro(List<Veiculo> veiculos){
+        while(true){
+            List<Car> carros = veiculos.stream()
+        .filter(v -> v instanceof Car)
+        .map(v -> (Car) v)
+        .collect(Collectors.toList());
+
+    if (carros.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Nenhum carro registrado!");
+        return;
+    }
+    TelaListaVeiculos ListarCar = new TelaListaVeiculos();
+    ListarCar.setListCar(carros);
+    ListarCar.preencherListaCar();
+    ListarCar.setVisible(true);
+    while (ListarCar.isVisible()) {
+            try {
+                Thread.sleep(100); // Pequena pausa para evitar consumo excessivo de CPU
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    String CarroSelecionado;
+    CarroSelecionado = ListarCar.getEscolhaStringCar();
+    if (CarroSelecionado == null) {
+            JOptionPane.showMessageDialog(null, "Visualização cancelada.");
+            return;
+                  }
+            if (CarroSelecionado.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor, escolha um carro.");
+            continue;
+                   }
+            try{
+                  int CarroSelectInt = Integer.parseInt(CarroSelecionado);
+                    
+                    mostrarDetalhesCarro(carros.get(CarroSelectInt-1));
+                    return;
+                   }
+            catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Erro ao converter valores. Verifique os campos numéricos.");
+        } 
+        }
+        
+        
+    }
+    public static void EditarCarro(List<Veiculo> veiculos){
+        while(true){
+            List<Car> carros = veiculos.stream()
+        .filter(v -> v instanceof Car)
+        .map(v -> (Car) v)
+        .collect(Collectors.toList());
+
+    if (carros.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Nenhum carro registrado!");
+        return;
+    }
+    TelaListaVeiculos ListarCar = new TelaListaVeiculos();
+    ListarCar.setListCar(carros);
+    ListarCar.preencherListaCar();
+    ListarCar.setVisible(true);
+    while (ListarCar.isVisible()) {
+            try {
+                Thread.sleep(100); // Pequena pausa para evitar consumo excessivo de CPU
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    String CarroSelecionado;
+    CarroSelecionado = ListarCar.getEscolhaStringCar();
+    if (CarroSelecionado == null) {
+            JOptionPane.showMessageDialog(null, "Visualização cancelada.");
+            return;
+                  }
+            if (CarroSelecionado.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor, escolha um carro.");
+            continue;
+                   }
+            try{
+                  int CarroSelectInt = Integer.parseInt(CarroSelecionado);
+                    
+                    mostrarDetalhesCarro(carros.get(CarroSelectInt-1));
+                    return;
+                   }
+            catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Erro ao converter valores. Verifique os campos numéricos.");
+        } 
+        }
+        
+        
+    }
+
+        
+    
+    public static void mostrarDetalhesCarro(Car carro) {
+    String detalhes = "=== DETALHES DO CARRO ===\n" +
+                     "Nome: " + carro.getNome() + "\n" +
+                     "Marca: " + carro.getMarca() + "\n" +
+                     "Modelo: " + carro.getModelo() + "\n" +
+                     "Ano: " + carro.getAno() + "\n" +
+                     "Placa: " + carro.getPlaca() + "\n" +
+                     "Portas: " + carro.getPortas() + "\n" +
+                     "Capacidade Porta-Malas: " + carro.getCapacidadePortaMalas() + "L\n" +
+                     "Combustível: " + carro.getTipoCombustivel() + "\n" +
+                     "Ar Condicionado: " + (carro.getArCondicionado() ? "Sim" : "Não") + "\n" +
+                     "Câmbio: " + (carro.getCambioAutomatico() ? "Automático" : "Manual") + "\n" +
+                     "Alugado: " + (carro.getAlugado() ? "Sim" : "Não");
+
+    JOptionPane.showMessageDialog(null, detalhes, "Detalhes do Carro", JOptionPane.INFORMATION_MESSAGE);
+}
         
     }
     
