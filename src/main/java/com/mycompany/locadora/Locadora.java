@@ -43,6 +43,8 @@ public class Locadora {
              case 1: verListaVeiculos(veiculos); break;
              case 2: VeiculoService.EditarVeiculos(veiculos); break;
              case 3: VeiculoService.AlugarVeiculo(veiculos); break;
+             case 4: VeiculoService.DevolverVeiculo(veiculos);break;
+             case 5: rodando = false; break;
          }
              
                  

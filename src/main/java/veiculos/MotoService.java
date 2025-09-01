@@ -267,6 +267,61 @@ public class MotoService {
         
         
     }
+    public static void DevolverMoto(List<Veiculo> veiculos){
+        while(true) {
+        List<Moto> motos = veiculos.stream()
+            .filter(v -> v instanceof Moto)
+            .map(v -> (Moto) v)
+            .filter(moto -> moto.isAlugado()) // Filtra apenas motos não alugadas
+            .collect(Collectors.toList());
+
+    if (motos.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Nenhuma moto registrada!");
+        return;
+    }
+    TelaListaVeiculos ListarMoto = new TelaListaVeiculos();
+    ListarMoto.setListmoto(motos);
+    ListarMoto.preencherListaMoto();
+    ListarMoto.setVisible(true);
+    while (ListarMoto.isVisible()) {
+            try {
+                Thread.sleep(100); 
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    String CarroSelecionado;
+    CarroSelecionado = ListarMoto.getEscolhaStringCar();
+    if (CarroSelecionado == null) {
+            JOptionPane.showMessageDialog(null, "Visualização cancelada.");
+            return;
+                  }
+            if (CarroSelecionado.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor, escolha uma moto");
+            continue;
+                   }
+            try{
+                  int MotoSelectInt = Integer.parseInt(CarroSelecionado);
+                    
+                    mostrarDetalhesMoto(motos.get(MotoSelectInt-1));
+                    Moto Motoedit = motos.get(MotoSelectInt-1);
+                    int option = JOptionPane.showConfirmDialog(null, "Devolver moto?", "Confirmação",JOptionPane.OK_CANCEL_OPTION);
+                    if (option == JOptionPane.OK_OPTION) {
+                        Motoedit.setAlugado(false);
+                        JOptionPane.showMessageDialog(null, "Moto devolvida com sucesso");
+                    
+                } else{
+                        JOptionPane.showMessageDialog(null, "operação cancelada");
+                    }
+                    return;
+                   }
+            catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Erro ao converter valores. Verifique os campos numéricos.");
+        } 
+        }
+        
+        
+    }
     }
 
     

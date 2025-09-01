@@ -233,6 +233,116 @@ public class CarService {
 
     JOptionPane.showMessageDialog(null, detalhes, "Detalhes do Carro", JOptionPane.INFORMATION_MESSAGE);
 }
+    public static void AlugarCarro(List<Veiculo> veiculos){
+        while(true) {
+        List<Car> carros = veiculos.stream()
+            .filter(v -> v instanceof Car)
+            .map(v -> (Car) v)
+            .filter(Car -> !Car.isAlugado()) 
+            .collect(Collectors.toList());
+
+    if (carros.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Nenhuma moto registrada!");
+        return;
+    }
+    TelaListaVeiculos ListarCarro = new TelaListaVeiculos();
+    ListarCarro.setListCar(carros);
+    ListarCarro.preencherListaCar();
+    ListarCarro.setVisible(true);
+    while (ListarCarro.isVisible()) {
+            try {
+                Thread.sleep(100); 
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    String CarroSelecionado;
+    CarroSelecionado = ListarCarro.getEscolhaStringCar();
+    if (CarroSelecionado == null) {
+            JOptionPane.showMessageDialog(null, "Visualização cancelada.");
+            return;
+                  }
+            if (CarroSelecionado.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor, escolha um Carro");
+            continue;
+                   }
+            try{
+                  int CarroSelectInt = Integer.parseInt(CarroSelecionado);
+                    
+                    mostrarDetalhesCarro(carros.get(CarroSelectInt-1));
+                    Car Carroedit = carros.get(CarroSelectInt-1);
+                    int option2 = JOptionPane.showConfirmDialog(null, "Alugar Carro?", "Confirmação",JOptionPane.OK_CANCEL_OPTION);
+                    if (option2 == JOptionPane.OK_OPTION) {
+                        Carroedit.setAlugado(true);
+                        JOptionPane.showMessageDialog(null, "Carro alugado com sucesso");
+                    
+                } else{
+                        JOptionPane.showMessageDialog(null, "operação cancelada");
+                    }
+                    return;
+                   }
+            catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Erro ao converter valores. Verifique os campos numéricos.");
+        } 
+        }
+        
+        
+    }
+    public static void DevolverCarro(List<Veiculo> veiculos){
+        while(true) {
+        List<Car> carros = veiculos.stream()
+            .filter(v -> v instanceof Car)
+            .map(v -> (Car) v)
+            .filter(Car -> Car.isAlugado()) 
+            .collect(Collectors.toList());
+
+    if (carros.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Nenhum carro registrado!");
+        return;
+    }
+    TelaListaVeiculos ListarCarro = new TelaListaVeiculos();
+    ListarCarro.setListCar(carros);
+    ListarCarro.preencherListaCar();
+    ListarCarro.setVisible(true);
+    while (ListarCarro.isVisible()) {
+            try {
+                Thread.sleep(100); 
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    String CarroSelecionado;
+    CarroSelecionado = ListarCarro.getEscolhaStringCar();
+    if (CarroSelecionado == null) {
+            JOptionPane.showMessageDialog(null, "Visualização cancelada.");
+            return;
+                  }
+            if (CarroSelecionado.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor, escolha um carro");
+            continue;
+                   }
+            try{
+                  int MotoSelectInt = Integer.parseInt(CarroSelecionado);
+                    
+                    mostrarDetalhesCarro(carros.get(MotoSelectInt-1));
+                    Car Carroedit = carros.get(MotoSelectInt-1);
+                    int option = JOptionPane.showConfirmDialog(null, "Devolver carro?", "Confirmação",JOptionPane.OK_CANCEL_OPTION);
+                    if (option == JOptionPane.OK_OPTION) {
+                        Carroedit.setAlugado(false);
+                        JOptionPane.showMessageDialog(null, "Carro devolvido com sucesso");
+                    
+                } else{
+                        JOptionPane.showMessageDialog(null, "operação cancelada");
+                    }
+                    return;
+                   }
+            catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Erro ao converter valores. Verifique os campos numéricos.");
+        } 
+        }
+        
+        
+    }
         
     }
     

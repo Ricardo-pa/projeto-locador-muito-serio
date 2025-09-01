@@ -4,6 +4,8 @@
  */
 package veiculos;
 
+import java.util.stream.Stream;
+
 public class Car extends Veiculo{
     
     private int portas;
@@ -45,7 +47,11 @@ public boolean getCambioAutomatico() {
 
 public boolean getAlugado() {
     return alugado;
+    
 }
+public boolean isAlugado() {
+        return alugado;
+    }
 public void setPortas(int portas) {
         this.portas = portas;
     }
@@ -88,4 +94,6 @@ public void setPortas(int portas) {
         setArCondicionado(arCondicionado);
         setCambioAutomatico(cambioAutomatico);
     }
+
+    
 }

@@ -23,6 +23,7 @@ public class Moto extends Veiculo {
         this.combustivel = combustivel;
         this.tipoFreio = tipoFreio;
         this.guidon = guidon;
+         this.alugado = false;
         
         
         
@@ -50,6 +51,48 @@ public class Moto extends Veiculo {
     public boolean isAlugado() {
         return alugado;
     }
+    public void setCilindradas(int cilindradas) {
+    this.cilindradas = cilindradas;
+}
+
+public void setTipoPartida(String tipoPartida) {
+    this.tipoPartida = tipoPartida;
+}
+
+public void setCombustivel(String combustivel) {
+    this.combustivel = combustivel;
+}
+
+public void setTipoFreio(String tipoFreio) {
+    this.tipoFreio = tipoFreio;
+}
+
+public void setGuidon(String guidon) {
+    this.guidon = guidon;
+}
+
+public void setAlugado(boolean alugado) {
+    this.alugado = alugado;
+}
+
+// Método setAll que utiliza todos os setters na ordem do construtor
+public void setAll(String nome, String marca, String modelo, int ano, String placa,
+                  int cilindradas, String tipoPartida, String combustivel, 
+                  String tipoFreio, String guidon) {
+    // Usando os setters da classe pai (Veiculo)
+    setNome(nome);
+    setMarca(marca);
+    setModelo(modelo);
+    setAno(ano);
+    setPlaca(placa);
+    
+    // Usando os setters da classe Moto
+    setCilindradas(cilindradas);
+    setTipoPartida(tipoPartida);
+    setCombustivel(combustivel);
+    setTipoFreio(tipoFreio);
+    setGuidon(guidon);
+}
     
 }
 
