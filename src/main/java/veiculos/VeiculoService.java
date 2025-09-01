@@ -71,9 +71,30 @@ public class VeiculoService {
                 }
             }
              if("Carro".equals(NewVeiculo) ){
-                 CarService.VerListaCarro(veiculos);
+                 CarService.EditarCarro(veiculos);
              } else if("Moto".equals(NewVeiculo) ){
                  MotoService.VerListaMoto(veiculos);
+             }
+    }
+    public static void AlugarVeiculo(List<Veiculo> veiculos){
+        TelaEscolha tela = new TelaEscolha();
+             String NewVeiculo = tela.getVeiculoSelecionado();
+             
+             while(NewVeiculo == null){
+             tela.setVisible(true);
+             while(tela.isVisible()){
+                 Thread.onSpinWait();
+                }
+             NewVeiculo = tela.getVeiculoSelecionado();
+             
+             if(NewVeiculo == null) {
+                 JOptionPane.showMessageDialog(null, "Escolha uma opção");
+                }
+            }
+             if("Carro".equals(NewVeiculo) ){
+                 CarService.VerListaCarro(veiculos);
+             } else if("Moto".equals(NewVeiculo) ){
+                 MotoService.AlugarMoto(veiculos);
              }
     }
     

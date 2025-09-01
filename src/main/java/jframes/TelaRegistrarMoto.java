@@ -54,6 +54,62 @@ public String getPartida() {
 public String getFreio() {
     return Freio;
 }
+public void setNomeMoto(String texto) {
+    NomeMoto.setText(texto);
+}
+
+public void setMarcaMoto(String texto) {
+    MarcaMoto.setText(texto);
+}
+
+public void setModeloMoto(String texto) {
+    ModeloMoto.setText(texto);
+}
+
+public void setAnoMoto(int ano) {
+    AnoMoto.setText(String.valueOf(ano));
+}
+
+public void setPlacaMoto(String texto) {
+    PlacaMoto.setText(texto);
+}
+
+public void setCilindradaMoto(int cilindrada) {
+    CilindradaMoto.setText(String.valueOf(cilindrada));
+}
+
+public void setCombuMoto(String texto) {
+    CombuMoto.setText(texto);
+}
+
+public void setGuidonMoto(String texto) {
+    GuidonMoto.setText(texto);
+}
+
+// Setters para JComboBox com conversões adequadas
+public void setPartidaMoto(String tipoPartida) {
+    PartidaMoto.setSelectedItem(tipoPartida);
+}
+
+public void setFreioMoto(String tipoFreio) {
+    FreioMoto.setSelectedItem(tipoFreio);
+}
+
+// Método para preencher todos os campos de uma vez
+public void preencherTodosCamposMoto(String nome, String marca, String modelo, int ano, 
+                                    String placa, int cilindrada, String combustivel, 
+                                    String guidon, String partida, String freio) {
+    setNomeMoto(nome);
+    setMarcaMoto(marca);
+    setModeloMoto(modelo);
+    setAnoMoto(ano);
+    setPlacaMoto(placa);
+    setCilindradaMoto(cilindrada);
+    setCombuMoto(combustivel);
+    setGuidonMoto(guidon);
+    setPartidaMoto(partida);
+    setFreioMoto(freio);
+}
 
    
     @SuppressWarnings("unchecked")

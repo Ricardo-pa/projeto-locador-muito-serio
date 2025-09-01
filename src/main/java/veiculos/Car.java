@@ -20,6 +20,7 @@ public class Car extends Veiculo{
         this.tipoCombustivel = tipoCombustivel;
         this.arCondicionado = arCondicionado;
         this.cambioAutomatico = cambioAutomatico;
+        this.alugado = false;
         
 }
     public int getPortas() {
@@ -45,4 +46,46 @@ public boolean getCambioAutomatico() {
 public boolean getAlugado() {
     return alugado;
 }
+public void setPortas(int portas) {
+        this.portas = portas;
+    }
+    
+    public void setCapacidadePortaMalas(int capacidadePortaMalas) {
+        this.capacidadePortaMalas = capacidadePortaMalas;
+    }
+    
+    public void setTipoCombustivel(String tipoCombustivel) {
+        this.tipoCombustivel = tipoCombustivel;
+    }
+    
+    public void setArCondicionado(boolean arCondicionado) {
+        this.arCondicionado = arCondicionado;
+    }
+    
+    public void setCambioAutomatico(boolean cambioAutomatico) {
+        this.cambioAutomatico = cambioAutomatico;
+    }
+    
+    public void setAlugado(boolean alugado) {
+        this.alugado = alugado;
+    }
+    
+
+    public void setAll(String nome, String marca, String modelo, int ano, String placa,
+                      int portas, int capacidadePortaMalas, String tipoCombustivel,
+                      boolean arCondicionado, boolean cambioAutomatico) {
+       
+        setNome(nome);
+        setMarca(marca);
+        setModelo(modelo);
+        setAno(ano);
+        setPlaca(placa);
+        
+        
+        setPortas(portas);
+        setCapacidadePortaMalas(capacidadePortaMalas);
+        setTipoCombustivel(tipoCombustivel);
+        setArCondicionado(arCondicionado);
+        setCambioAutomatico(cambioAutomatico);
+    }
 }

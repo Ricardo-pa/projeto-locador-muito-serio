@@ -41,6 +41,8 @@ public class Locadora {
          switch(escolha){
              case 0: RegistrarVeiculo(); break;
              case 1: verListaVeiculos(veiculos); break;
+             case 2: VeiculoService.EditarVeiculos(veiculos); break;
+             case 3: VeiculoService.AlugarVeiculo(veiculos); break;
          }
              
                  

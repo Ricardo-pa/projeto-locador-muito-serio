@@ -46,6 +46,63 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
     public String getCapPoMa(){
         return this.CapPoMa;
     }
+     public void setNomeCarro(String texto) {
+        NomeCarro.setText(texto);
+    }
+    
+    public void setMarcaCarro(String texto) {
+        MarcaCarro.setText(texto);
+    }
+    
+    public void setModeloCarro(String texto) {
+        ModeloCarro.setText(texto);
+    }
+    
+    public void setAnoCarro(int ano) {
+        AnoCarro.setText(String.valueOf(ano));
+    }
+    
+    public void setPlacaCarro(String texto) {
+        PlacaCarro.setText(texto);
+    }
+    
+    public void setCombuCarro(String texto) {
+        CombuCarro.setText(texto);
+    }
+    
+    public void setArCarro(boolean temAr) {
+        ArCarro.setSelectedItem(temAr ? "Sim" : "Não");
+    }
+    
+    public void setPortaMaCarro(int capacidade) {
+        PortaMaCarro.setText(String.valueOf(capacidade));
+    }
+    
+    // Setters para JComboBox com conversões adequadas
+    public void setPortasCarro(int numeroPortas) {
+        String textoPortas = numeroPortas + " Portas";
+        PortasCarro.setSelectedItem(textoPortas);
+    }
+    
+    public void setCambioCarro(boolean isAutomatico) {
+        String textoCambio = isAutomatico ? "Automatico" : "Manual";
+        CambioCarro.setSelectedItem(textoCambio);
+    }
+    public void preencherTodosCampos(String nome, String marca, String modelo, int ano, 
+                                    String placa, int portas, String combustivel, 
+                                    boolean arCondicionado, boolean cambioAutomatico, 
+                                    int capacidadePortaMalas) {
+        setNomeCarro(nome);
+        setMarcaCarro(marca);
+        setModeloCarro(modelo);
+        setAnoCarro(ano);
+        setPlacaCarro(placa);
+        setPortasCarro(portas);
+        setCombuCarro(combustivel);
+        setArCarro(arCondicionado);
+        setCambioCarro(cambioAutomatico);
+        setPortaMaCarro(capacidadePortaMalas);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -73,12 +130,12 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jLabel7 = new javax.swing.JLabel();
         PortaMaCarro = new javax.swing.JTextField();
-        ArCarro = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         CambioCarro = new javax.swing.JComboBox<>();
         Ok = new javax.swing.JButton();
         lbCancel = new javax.swing.JButton();
+        ArCarro = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registrar Carro");
@@ -161,7 +218,7 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
                 .addGap(127, 127, 127)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PortaMaCarro)
+                .addComponent(PortaMaCarro, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                 .addGap(155, 155, 155))
         );
         jDesktopPane1Layout.setVerticalGroup(
@@ -173,12 +230,6 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
                     .addComponent(PortaMaCarro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(3, 3, 3))
         );
-
-        ArCarro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ArCarroActionPerformed(evt);
-            }
-        });
 
         jLabel10.setText("Ar Condicionado:");
 
@@ -199,6 +250,8 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
                 lbCancelActionPerformed(evt);
             }
         });
+
+        ArCarro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sim", "Não" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -224,14 +277,14 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
                                 .addComponent(NomeCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                                 .addComponent(MarcaCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(CombuCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel10)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ArCarro, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(ArCarro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -280,9 +333,9 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
                     .addComponent(jLabel8)
                     .addComponent(CombuCarro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10)
-                    .addComponent(ArCarro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11)
-                    .addComponent(CambioCarro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(CambioCarro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ArCarro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
@@ -323,10 +376,6 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
         // TODO add your handling code here:
     }//GEN-LAST:event_PortaMaCarroActionPerformed
 
-    private void ArCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ArCarroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ArCarroActionPerformed
-
     private void PortasCarroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PortasCarroActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PortasCarroActionPerformed
@@ -339,7 +388,7 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
         Placa = (String) PlacaCarro.getText();
         Portas = (String) PortasCarro.getSelectedItem();
         Combus = (String) CombuCarro.getText();
-        Ar = (String) ArCarro.getText();
+        Ar = (String) ArCarro.getSelectedItem();
         Cambio = (String) CambioCarro.getSelectedItem();
         CapPoMa = (String) PortaMaCarro.getText();
         this.dispose();
@@ -400,7 +449,7 @@ private String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AnoCarro;
-    private javax.swing.JTextField ArCarro;
+    private javax.swing.JComboBox<String> ArCarro;
     private javax.swing.JComboBox<String> CambioCarro;
     private javax.swing.JTextField CombuCarro;
     private javax.swing.JTextField MarcaCarro;

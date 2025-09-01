@@ -38,7 +38,8 @@ public class TelaListaVeiculos extends javax.swing.JFrame {
             Veiculo veiculogamer = carrocerto.get(i);
             sb.append(i + 1).append(". ")
               .append(veiculogamer.getNome()).append(" - ")
-              .append(veiculogamer.getPlaca()).append("\n");
+              .append(veiculogamer.getPlaca()).append(" - Ano: ")
+              .append(veiculogamer.getAno()).append("\n");
         }
         listaCarros.setText(sb.toString());
     }
@@ -48,7 +49,8 @@ public class TelaListaVeiculos extends javax.swing.JFrame {
             Veiculo veiculogamer = motocerto.get(i);
             sb.append(i + 1).append(". ")
               .append(veiculogamer.getNome()).append(" - ")
-              .append(veiculogamer.getPlaca()).append("\n");
+              .append(veiculogamer.getPlaca()).append(" - Ano: ")
+                    .append(veiculogamer.getAno()).append("\n");
         }
         listaCarros.setText(sb.toString());
     }
@@ -70,8 +72,9 @@ public class TelaListaVeiculos extends javax.swing.JFrame {
         TextoEscolhaCarro = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Lista de Carros");
+        setTitle("Lista de veiculos");
 
+        listaCarros.setEditable(false);
         listaCarros.setColumns(20);
         listaCarros.setRows(5);
         jScrollPane1.setViewportView(listaCarros);
@@ -90,7 +93,7 @@ public class TelaListaVeiculos extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Digite o numero do Carro para selecionar:");
+        jLabel1.setText("Digite o numero do Veiculo para selecionar:");
 
         TextoEscolhaCarro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,7 +109,7 @@ public class TelaListaVeiculos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 235, Short.MAX_VALUE)
+                        .addGap(0, 225, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(OkverCarro, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING))

@@ -130,7 +130,7 @@ public class CarService {
     ListarCar.setVisible(true);
     while (ListarCar.isVisible()) {
             try {
-                Thread.sleep(100); // Pequena pausa para evitar consumo excessivo de CPU
+                Thread.sleep(100); 
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -148,7 +148,7 @@ public class CarService {
             try{
                   int CarroSelectInt = Integer.parseInt(CarroSelecionado);
                     
-                    mostrarDetalhesCarro(carros.get(CarroSelectInt-1));
+                    MostrarTelaDeEdiçãoCar(carros.get(CarroSelectInt-1));
                     return;
                    }
             catch (NumberFormatException e) {
@@ -161,6 +161,62 @@ public class CarService {
 
         
     
+    
+    public static void MostrarTelaDeEdiçãoCar(Car numCar){
+        TelaRegistrarCarro TelaCar = new TelaRegistrarCarro();
+        TelaCar.preencherTodosCampos(numCar.getNome(), numCar.getMarca(), numCar.getModelo(),
+                numCar.getAno(), numCar.getPlaca(), numCar.getPortas(),
+                numCar.getTipoCombustivel(), numCar.getArCondicionado(), numCar.getCambioAutomatico(), numCar.getCapacidadePortaMalas());
+         while(true){
+        
+        TelaCar.setVisible(true);
+        while (TelaCar.isVisible()) {
+            try {
+                Thread.sleep(100); // Pequena pausa para evitar consumo excessivo de CPU
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+                   String Nome, Marca,Modelo, Ano, Placa, Portas,Combus,Ar,Cambio,CapPoMa;
+                  Nome = TelaCar.getnome();
+                  Marca = TelaCar.getMarca();
+                  Modelo = TelaCar.getModelo();
+                  Ano = TelaCar.getAno();
+                  Portas = TelaCar.getPortas();
+                  Ar = TelaCar.getAr();
+                  Cambio = TelaCar.getCambio();
+                  Combus = TelaCar.getCombus();
+                  CapPoMa = TelaCar.getCapPoMa();
+                  Placa = TelaCar.getPlaca();
+                  if (Nome == null) {
+            JOptionPane.showMessageDialog(null, "Registro cancelado.");
+            return;
+                  }
+                  
+                   if (Nome.isEmpty() || Marca.isEmpty() || Modelo.isEmpty() || Ano.isEmpty() || 
+            Placa.isEmpty() || Portas == null || Combus.isEmpty() || Ar.isEmpty() || 
+            Cambio == null || CapPoMa.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos.");
+            continue;
+                   }
+                   try{
+                  int anoInt = Integer.parseInt(Ano);
+                  int portasInt = Integer.parseInt(Portas.replace(" Portas", "").trim());
+                  int capacidadePortaMalasInt = Integer.parseInt(CapPoMa);
+                  boolean arCondicionado = "Sim".equalsIgnoreCase(Ar) || "true".equalsIgnoreCase(Ar);
+                  boolean cambioAutomatico = "Automatico".equalsIgnoreCase(Cambio);
+                  
+                 numCar.setAll(Nome, Marca, Modelo, anoInt, Placa, portasInt, capacidadePortaMalasInt, Combus, arCondicionado, cambioAutomatico);
+                  
+                    
+                    JOptionPane.showMessageDialog(null, "Carro editado com sucesso!");
+                    return;
+                   }
+                   catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Erro ao converter valores. Verifique os campos numéricos.");
+        }
+            }
+    }
     public static void mostrarDetalhesCarro(Car carro) {
     String detalhes = "=== DETALHES DO CARRO ===\n" +
                      "Nome: " + carro.getNome() + "\n" +

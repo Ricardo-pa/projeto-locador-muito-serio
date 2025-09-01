@@ -10,13 +10,13 @@ package veiculos;
  */
 public class Veiculo { 
     private String nome; 
-    private String Marca; 
-    private String Modelo; private int ano; 
+    private String marca; 
+    private String modelo; private int ano; 
     private String placa; 
     public Veiculo(String nome,String Marca,String Modelo,int ano, String placa){ 
         this.nome = nome; 
-        this.Marca = Marca; 
-        this.Modelo = Modelo; 
+        this.marca = Marca; 
+        this.modelo = Modelo; 
         this.ano = ano; 
         this.placa = placa; 
     } 
@@ -25,11 +25,11 @@ public class Veiculo {
     }
     
     public String getMarca() {
-        return Marca;
+        return marca;
     }
     
     public String getModelo() {
-        return Modelo;
+        return modelo;
     }
     
     public int getAno() {
@@ -39,4 +39,24 @@ public class Veiculo {
     public String getPlaca() {
         return placa;
     }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+    
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+    
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+    
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+    
 }
